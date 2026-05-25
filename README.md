@@ -1,7 +1,7 @@
 # CVSearch: Empowering Multimodal LLMs with Cognitive Visual Search for High-Resolution Image Perception
 
 <p align="center">
-  <a href="https://arxiv.org/abs/2410.13454"><img src="https://img.shields.io/badge/Paper-Arxiv-red"></a>
+  <a href="[https://arxiv.org/abs/2410.13454](http://arxiv.org/abs/2605.23655)"><img src="https://img.shields.io/badge/Paper-Arxiv-red"></a>
   <img src="https://img.shields.io/badge/Conference-ICML%202026-green">
 </p>
 
