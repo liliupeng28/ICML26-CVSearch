@@ -1,8 +1,8 @@
 # CVSearch: Empowering Multimodal LLMs with Cognitive Visual Search for High-Resolution Image Perception
 
 <p align="center">
-  <a href="[https://arxiv.org/abs/2410.13454](http://arxiv.org/abs/2605.23655)"><img src="https://img.shields.io/badge/Paper-Arxiv-red"></a>
-  <img src="https://img.shields.io/badge/Conference-ICML%202026-green">
+<a href="http://arxiv.org/abs/2605.23655"><img src="https://img.shields.io/badge/Paper-Arxiv-red" alt="Paper-Arxiv"></a>
+<a href="https://icml.cc/virtual/2026/poster/65958"><img src="https://img.shields.io/badge/Conference-ICML%202026-green" alt="Conference-ICML 2026"></a>
 </p>
 
 Official PyTorch implementation of the **ICML 2026** paper: "**CVSearch: Empowering Multimodal LLMs with Cognitive Visual Search for High-Resolution Image Perception**". 
