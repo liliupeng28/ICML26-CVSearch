@@ -68,7 +68,7 @@ class ModelInternvl:
         self.tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True, use_fast=False)
         self.model = AutoModel.from_pretrained(
             model_path,
-            torch_dtype=torch.bfloat16,
+            dtype=torch.bfloat16,
             low_cpu_mem_usage=True,
             use_flash_attn=True,
             device_map=self.device,
