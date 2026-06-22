@@ -113,9 +113,7 @@ class sam3_inference():
         batch = collate([datapoint], dict_key="dummy")["dummy"]
         batch = copy_data_to_device(batch, torch.device("cuda"), non_blocking=True)
 
-        with torch.autocast(device_type="cuda", dtype=torch.bfloat16):
-            output, backbone_out = self.model(batch)
-
+        output, backbone_out = self.model(batch)
         processed_results = self.postprocessor.process_results(output, batch.find_metadatas)
 
         return backbone_out, processed_results, text_id
