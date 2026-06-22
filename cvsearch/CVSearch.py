@@ -31,7 +31,7 @@ def get_cvsearch_response(
     # Data loading
     #Default single_target: tree_depth_s = 2, cross_target: tree_depth_c = 3
     tree_generate_threshold = 0.15
-    tree_prune_threshold = 0.2
+    tree_prune_threshold = 0.4
     tree_depth_s = 2
     tree_depth_c = 3
     input_image = annotation['input_image']
