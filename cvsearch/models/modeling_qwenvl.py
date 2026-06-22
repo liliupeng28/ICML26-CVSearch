@@ -25,7 +25,7 @@ class ModelQwenVL:
             self.tokenizer = self.processor.tokenizer
             self.model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
                 model_path,
-                torch_dtype=self.dtype,
+                dtype=self.dtype,
                 attn_implementation=actual_attn_implementation,
                 device_map=device_map,
                 **load_kwargs
@@ -36,7 +36,7 @@ class ModelQwenVL:
             self.tokenizer = self.processor.tokenizer
             self.model = Qwen3VLForConditionalGeneration.from_pretrained(
                 model_path,
-                torch_dtype=self.dtype,
+                dtype=self.dtype,
                 attn_implementation=actual_attn_implementation,
                 device_map=device_map,
                 **load_kwargs
