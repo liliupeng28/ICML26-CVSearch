@@ -500,7 +500,7 @@ class ModelGlobalLocal(Model):
 
         if len(image_list) > 1:
             raw_image_resize, croped_view, zoom_view = image_list
-            image_input = [raw_image_resize, zoom_view]
+            image_input = [zoom_view]
         else:
             image_input = image_list
 
@@ -537,7 +537,7 @@ class ModelGlobalLocal(Model):
 
         if len(image_list) > 1:
             raw_image_resize, croped_view, zoom_view = image_list
-            image_input = [raw_image_resize, zoom_view]
+            image_input = [zoom_view]
         else:
             image_input = image_list
 
@@ -574,7 +574,7 @@ class ModelGlobalLocal(Model):
 
         if len(image_list) > 1:
             raw_image_resize, croped_view, zoom_view = image_list
-            image_input = [raw_image_resize, zoom_view]
+            image_input = [zoom_view]
         else:
             image_input = image_list
 
