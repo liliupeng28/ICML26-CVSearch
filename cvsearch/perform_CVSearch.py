@@ -110,7 +110,7 @@ if __name__ == "__main__":
             "threshold_descrease": [0.05, 0.1, 0.2],
             "answering_confidence_threshold_lower": 0,
             "answering_confidence_threshold_upper": 0.9,
-            "fast_threshold": 0.6
+            "fast_threshold": 0.6 #0.8
         }
     else:
         raise ValueError(f"Model {model_path} not supported")
