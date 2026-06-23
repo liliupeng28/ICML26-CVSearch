@@ -30,7 +30,6 @@ def get_cvsearch_response(
 ):
     # Data loading
     #Default single_target: tree_depth_s = 2, cross_target: tree_depth_c = 3
-    tree_generate_threshold = 0.15
     tree_prune_threshold = 0.4
     tree_depth_s = 2
     tree_depth_c = 3
@@ -140,7 +139,7 @@ def get_cvsearch_response(
 
                 feat = feat.squeeze(0)  # batch -> (256, 72, 72), C,H,W
                 tree_depth = 3
-                builder = ConstrainedTreeBuilder(feat, n_atoms=600, pos_weight=3.5, split_threshold=0.3, keep_threshold=tree_generate_threshold)
+                builder = ConstrainedTreeBuilder(feat, n_atoms=600, pos_weight=3.5, split_threshold=0.3, keep_threshold=0.15)
                 tree_dict = builder.build_tree(max_depth=tree_depth, min_splits=4, max_splits=8)
                 feat_shape = feat.shape
                 image_tree = AdaptiveImageTree(image_pil, tree_dict, feat_shape)
@@ -228,7 +227,7 @@ def get_cvsearch_response(
                                             depth_limit_sub = tree_depth_s
                                             builder_sub = ConstrainedTreeBuilder(feature_map=feat_sub, n_atoms=600,
                                                                                  pos_weight=3.5, split_threshold=0.3,
-                                                                                 keep_threshold=tree_generate_threshold,
+                                                                                 keep_threshold=0.15,
                                                                                  use_local_normalization=True,
                                                                                  use_silhouette_score=True)
                                             tree_sub = builder_sub.build_tree(max_depth=tree_depth_sub, min_splits=4, max_splits=8)
@@ -315,7 +314,7 @@ def get_cvsearch_response(
 
                 feat = feat.squeeze(0)
                 tree_depth = 3
-                builder = ConstrainedTreeBuilder(feat, n_atoms=600, pos_weight=3.5, split_threshold=0.3, keep_threshold=tree_generate_threshold)
+                builder = ConstrainedTreeBuilder(feat, n_atoms=600, pos_weight=3.5, split_threshold=0.3, keep_threshold=0.25)
                 tree_dict = builder.build_tree(max_depth=tree_depth, min_splits=4, max_splits=8)
                 feat_shape = feat.shape
                 image_tree = AdaptiveImageTree(image_pil, tree_dict, feat_shape)
@@ -398,7 +397,7 @@ def get_cvsearch_response(
                                             builder_sub = ConstrainedTreeBuilder(feature_map=feat_sub, n_atoms=600,
                                                                                  pos_weight=3.5,
                                                                                  split_threshold=0.3,
-                                                                                 keep_threshold=tree_generate_threshold,
+                                                                                 keep_threshold=0.15,
                                                                                  use_local_normalization=True,
                                                                                  use_silhouette_score=True)
                                             tree_sub = builder_sub.build_tree(max_depth=tree_depth_sub,
