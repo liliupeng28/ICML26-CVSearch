@@ -318,7 +318,7 @@ class ModelInternvl:
 
         if len(image_list) > 1:
             raw_image_resize, croped_view, zoom_view = image_list
-            image_input = [raw_image_resize, zoom_view]
+            image_input = [zoom_view]
         else:
             image_input = image_list
 
@@ -381,7 +381,7 @@ class ModelInternvl:
         image_list = self.process_nodes_to_image_list(searched_nodes, image_pil)
         if len(image_list) > 1:
             raw_image_resize, croped_view, zoom_view = image_list
-            image_input = [raw_image_resize, zoom_view]
+            image_input = [zoom_view]
         else:
             image_input = image_list
 
@@ -419,7 +419,7 @@ class ModelInternvl:
 
         if len(image_list) > 1:
             raw_image_resize, croped_view, zoom_view = image_list
-            image_input = [raw_image_resize, zoom_view]
+            image_input = [zoom_view]
         else:
             image_input = image_list
 
